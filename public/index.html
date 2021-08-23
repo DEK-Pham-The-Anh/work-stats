@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <title>Work Stats</title>
+    <link rel="stylesheet" href="./assets/main.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="app-wrapper">
+            <div id="app-form">
+                <div id="app-output">
+                    <label>
+                        <span>Total days: </span>
+                        <input id="timesCount" type="text" readonly />
+                    </label>
+                    <label>
+                        <span>Predicted total (h): </span>
+                        <input id="totalHoursPredict" type="text" readonly />
+                    </label>
+                    <label>
+                        <span>Total (h): </span>
+                        <input id="totalHours" type="text" readonly />
+                    </label>
+                    <label>
+                        <span>Total (m): </span>
+                        <input id="totalMinutes" type="text" readonly />
+                    </label>
+                    <label>
+                        <span>Total (h:m): </span>
+                        <input id="totalHoursMinutes" type="text" readonly />
+                    </label>
+                    <label>
+                        <span>Difference (h:m): </span>
+                        <input id="diff" type="text" readonly />
+                    </label>
+                    <label>
+                        <span>Total money: </span>
+                        <input id="moneyTotal" type="text" readonly />
+                    </label>
+                    <label>
+                        <span>Predicted money: </span>
+                        <input id="moneyPredict" type="text" readonly />
+                    </label>
+                    <label>
+                        <span>Average time (h): </span>
+                        <input id="avgHours" type="text" readonly />
+                    </label>
+                    <label>
+                        <span>Average time (m): </span>
+                        <input id="avgMinutes" type="text" readonly />
+                    </label>
+                    <label>
+                        <span>Average time (h:m): </span>
+                        <input id="avgHoursMinutes" type="text" readonly />
+                    </label>
+                </div>
+                <div id="app-input">
+                    <label>
+                        <span>Hours/day: *</span>
+                        <input id="hoursPerDay" type="text" />
+                    </label>
+                    <label>
+                        <span>Money/hour: *</span>
+                        <input id="moneyPerHour" type="text" />
+                    </label>
+                    <label>
+                        <span>Timesheet (h:m): *</span>
+                        <textarea id="timesheet"></textarea>
+                    </label>
+                </div>
+            </div>
+            <div id="app-footer">
+                <button id="calculate">Calculate</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./libs/jquery-v3.6.0.min.js"></script>
+    <script src="./assets/main.js"></script>
+</body>
+
+</html>
